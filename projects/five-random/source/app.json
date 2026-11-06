@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Five Random",
+    "slug": "five-random",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#F7F4F6",
+    "android": { "package": "com.fiverandom.app" },
+    "ios": { "bundleIdentifier": "com.fiverandom.app", "supportsTablet": true },
+    "web": { "bundler": "metro" }
+  }
+}

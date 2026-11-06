@@ -1,0 +1,9 @@
+Result: PASS
+Mode: In-process HTTP ASGI demonstration with synthetic RSA-signed tokens and injected local JWKS
+Synthetic members: 2
+Session messages: 2
+Legacy messages preserved: 1
+Persistent denial audits: 5
+Production listeners started: false
+Real database accessed: false
+Temporary database removed on return: true

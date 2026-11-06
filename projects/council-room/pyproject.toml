@@ -1,0 +1,31 @@
+[project]
+name = "olympus-council-room"
+version = "0.3.14"
+description = "Persistent, authenticated local backend for the OLYMPUS Council Room"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.119.0",
+  "httpx==0.28.1",
+  "PyJWT[crypto]==2.10.1",
+  "uvicorn[standard]==0.37.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2", "beautifulsoup4==4.14.2", "cbor2==5.7.1"]
+local-proof = ["beautifulsoup4==4.14.2", "cbor2==5.7.1"]
+
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["council_chamber*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+
+[tool.setuptools.package-data]
+council_chamber = ["room_static/*", "hecate_role.txt", "mercury_role.txt", "jupiter_role.txt", "daedalus_role.txt"]
